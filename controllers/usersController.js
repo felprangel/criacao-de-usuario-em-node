@@ -17,6 +17,7 @@ const validateUser = [
     .withMessage(`Last name ${alphaErr}`)
     .isLength({ min: 1, max: 10 })
     .withMessage(`Last name ${lengthErr}`),
+  body("email").isEmail().withMessage("Email is invalid."),
 ];
 
 exports.usersListGet = (req, res) => {
