@@ -91,7 +91,7 @@ exports.usersSearchGet = (req, res) => {
   const users = usersStorage.getUsers().filter((user) => {
     return user.firstName.toLowerCase().includes(nomePesquisa.toLowerCase());
   });
-  res.render("search", {
+  res.render("index", {
     title: "User search",
     users: users,
   });
